@@ -19,12 +19,12 @@ BEGIN
         BLOCK "040904b0" // US English, Unicode
         BEGIN
             VALUE "CompanyName",      "Unemployed Loser"
-            VALUE "FileDescription",  "Pops up messageboxs"
+            VALUE "FileDescription",  "GoodMsgv1 by Nova"
             VALUE "FileVersion",      "1.1.0.0"
-            VALUE "InternalName",     "GoodMsg.exe"
+            VALUE "InternalName",     "GoodMsgv1.exe"
             VALUE "LegalCopyright",   "mychemicalmisfit on Discord"
             VALUE "OriginalFilename", "GoodMsg.exe"
-            VALUE "ProductName",      "GoodMsg by Nova"
+            VALUE "ProductName",      "GoodMsgv1 by Nova"
             VALUE "ProductVersion",   "1.1.0.0"
         END
     END
