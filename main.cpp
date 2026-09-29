@@ -11,7 +11,7 @@
 const int BIRTHDAY_MONTH = 9; // September
 const int BIRTHDAY_DAY = 30;  // September 30th
 
-// 25% daily chance = averages ~1 or 2 surprise messages per week
+// 25% daily chance = averages ~1 surprise message per week
 const int RANDOM_PERCENT = 25;
 
 // SIMPLE SINGLE-POPUP BIRTHDAY MESSAGES
@@ -30,6 +30,18 @@ const std::vector<std::wstring> BIRTHDAY_MESSAGES = {
 const std::wstring NEW_YEAR_MESSAGE = L"Sheesh, I can't believe that 2026 is done already. I'm sure 2027 is gonna be your year for sure, come hell or high water. <3";
 const std::wstring CHRISTMAS_MESSAGE = L"It's Christmas already? What a hell of a year so far, but we made it. It's been a year of shit; the drama and that turdmelon Chloe, etc etc. But here we are near the end of 2026.\nMerry Christmans, Raven. Love, Nova/Kaysu";
 
+const std::vector<std::wstring> RANDOM_TITLES = {
+    L"Psst...",
+    L"A wild message appears!",
+    L"Made by Nova, pls report any bugs <3",
+    L"Thinking of you...",
+    L"Your computer says:",
+    L"System Notification: You're amazing",
+    L"Nova says:",
+    L"GoodMsg Rocks! (not really)",
+    L">Insert titlebar here",
+};
+
 // SIMPLE SINGLE-POPUP RANDOM MESSAGES
 const std::vector<std::wstring> RANDOM_MESSAGES = {
     L"Hey babes, Nova here..\nListen, I know shit is wack right now and it seems like an endless tunnel of bullshit, but I promise you it will get better.\nI am so proud of you for making it this far, and holding on when everything inside you screams to give up.\n\nAs I say, you fall down, you get up again.\nYou stall, you start again. You got this.",
@@ -44,7 +56,6 @@ const std::vector<std::wstring> RANDOM_MESSAGES = {
     L"Nova says: Don't forget to hydrate and take your meds (if needed) <3",
     L"Nova was here, telling you that\nshe loves you veeeery much,\nlike SO MUCH! <3",
     L"Hey hun.. You okay? Are you *really* okay? It's okay if you're not..\nI'll always be here if you need me, okay?\nOne day, we will meet and I'm gonna give you\nthe biggest hug in the world okay? It's gonna be okay <3",
-    L"It's ya girl Nova here!\nSorry for any bad text formatting, I'm new(ish) to C++.\nMight be fixed in a future update.. Maybe",
     L"Remeber that you come first. Don't forget your medication\n and don't forget to eat okay? Did you drink water and not Monster today?",
     L"So.. many.. lines of code..\nyou are worth it. *mwah*"
 };
@@ -121,7 +132,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         system(std::string(installCmd.begin(), installCmd.end()).c_str());
 
         // Show the initial welcome message on first install
-        ShowPopup(L"GoodMsg v1.0", L"Welcome to GoodMsg v1.1, Raven!\nMade by Nova with love from Toronto,Canada! <3");
+        // Show the initial welcome message on first install with SmartScreen guidance
+        ShowPopup(L"GoodMsg v1.1", L"Welcome to GoodMsg v1.1, Raven!\nMade by Nova with love from Toronto, Canada! <3\n\n(Note: If Windows ever shows a blue 'Protected your PC' warning or Smart Screen bullshit (so fucking lame, boo Windows), just click 'More info' then 'Run anyway'!)");
     }
 
     // 2. Standard Daily Log Check
@@ -165,7 +177,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
         if ((rand() % 50) < RANDOM_PERCENT) {
             int idx = rand() % RANDOM_MESSAGES.size();
-            ShowPopup(L"Made by Nova, pls report any bugs <3", RANDOM_MESSAGES[idx]);
+            int titleIdx = rand() % RANDOM_TITLES.size();
+            ShowPopup(RANDOM_TITLES[titleIdx], RANDOM_MESSAGES[idx]);
         }
     }
 
@@ -175,4 +188,3 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     }
 
     return 0;
-}
