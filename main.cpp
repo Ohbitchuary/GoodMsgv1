@@ -11,8 +11,8 @@
 const int BIRTHDAY_MONTH = 9; // September
 const int BIRTHDAY_DAY = 30;  // September 30th
 
-// 15% daily chance = averages ~1 surprise message per week
-const int RANDOM_PERCENT = 15;
+// 25% daily chance = averages ~1 or 2 surprise messages per week
+const int RANDOM_PERCENT = 25;
 
 // SIMPLE SINGLE-POPUP BIRTHDAY MESSAGES
 const std::vector<std::wstring> BIRTHDAY_MESSAGES = {
@@ -27,7 +27,7 @@ const std::vector<std::wstring> BIRTHDAY_MESSAGES = {
 };
 
 // SIMPLE SINGLE-POPUP HOLIDAYS
-const std::wstring NEW_YEAR_MESSAGE = L"2026 is done, and this is where shit gets real.\nThis year is gonna be your year for sure, come hell or high water. <3";
+const std::wstring NEW_YEAR_MESSAGE = L"Sheesh, I can't believe that 2026 is done already. I'm sure 2027 is gonna be your year for sure, come hell or high water. <3";
 const std::wstring CHRISTMAS_MESSAGE = L"It's Christmas already? What a hell of a year so far, but we made it. It's been a year of shit; the drama and that turdmelon Chloe, etc etc. But here we are near the end of 2026.\nMerry Christmans, Raven. Love, Nova/Kaysu";
 
 // SIMPLE SINGLE-POPUP RANDOM MESSAGES
