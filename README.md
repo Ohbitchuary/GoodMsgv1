@@ -4,7 +4,8 @@ This program might also set off Smart Screen, or that stupid blue Windows blocke
 i promise there's no malicious code, since you can see main.cpp in all it's bare-naked glory.
 windows sucks for their security, and a dev certificate isn't worth $450-$1000 Canadian dollars
 PLEASE KEEP THE DLL IN THE FOLDER GOODMSG EXISTS IN OTHERWISE IT WILL NOT RUN.
-Features: logfile, tells you last run, found in 
-C:\Users\Name\.GoodLog.txt"
+Features: logfile, tells you last run, found in the
+C:\Users\%NAME% directory under .GoodLog.txt 
+(e.g: C:\Users\Username\.GoodLog.txt)
 Features: Task manager presence, kill it whenever and rerun it later.
 More to come if i feel like it.
